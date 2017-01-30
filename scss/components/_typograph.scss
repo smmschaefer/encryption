@@ -1,0 +1,118 @@
+
+
+.navText {
+	color: $textNavHeader;
+	font-size:20px;
+	padding-left:30%;
+		a {
+			color: $textNavHeader;
+		}
+}
+
+.whoSwitch {
+	@include linkStuff;
+	
+	&:after {
+		@include outsideLinks;
+	}
+	&:hover:after {
+	  @include outsideHover;
+	}
+}
+
+#linkReport {
+	@include linkStuff;
+	
+	&:after {
+		@include outsideLinks;
+	}
+	&:hover:after {
+	  @include outsideHover;
+	}
+}
+
+#linkTest {
+	@include linkStuff;
+	
+	&:after {
+		@include outsideLinks;
+	}
+	&:hover:after {
+	  @include outsideHover;
+	}
+}
+
+#linkCode {
+	@include linkStuff;
+		
+	&:after {
+		@include outsideLinks;
+	}
+	&:hover:after {
+	  @include outsideHover;
+	}
+}
+
+#linkPres {
+	@include linkStuff;
+	
+	&:after {
+		@include outsideLinks;
+	}
+	&:hover:after {
+	  @include outsideHover;
+	}
+}
+
+.aIn {
+	@include linkInsideStuff;
+	
+	&:after {
+		@include insideLinks;
+	}
+	&:hover:after {
+		@include insideHover;
+	}	
+}
+
+#textWho {
+	color: $defaultText;
+	//padding: 0;
+	padding-right: 100px;
+	font-size: .75em;
+	font-weight: 600;
+}
+
+#cTable {
+	color: $defaultText;
+	margin: 0;
+	padding: 0;
+	align: left;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+ol {
+	li {
+		color: $defaultText;
+		font-size: .75em;
+	}
+}
+
+.completed {
+	text-decoration: line-through;
+}
+
+
+span {
+	color: $spanColor;
+}
+
+
+li {
+	color: $listColor;
+	font-weight: 550;
+}
+
+
+

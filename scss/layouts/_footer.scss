@@ -1,0 +1,80 @@
+//////////////////////////////////
+/////// HEADER && FOOTER
+//////////////////////////////////
+
+
+#nav {
+	//@include border-radiusHeader;
+	//@include border-radiusHeaderDouble;
+	@include border-radiusPick(0);
+	position: fixed;
+	//margin-left: 5%;
+	height: 65px;
+	background-color: white;
+	//display:inline-block;
+	display: inline-block;
+	width: 100%;
+	top: 0;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	background: rgba(0,0,0,0);
+	-webkit-transition: background-color 500ms linear;
+    -moz-transition: background-color 500ms linear;
+    -o-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+	
+	
+	#iconLogo {
+		//@include border-radiusPick(50px);
+		width: 154px;
+		height: 82px;
+		//position: absolute;
+		//padding: .2em 0 0 .2em;
+		//padding-left: 30px;
+		margin-left: 10%;
+		margin-top: -.8%;
+		//margin-bottom: 50px;
+		background: url(../img/transflection_logo_150.png) no-repeat;
+		background-size: 154px 82px;
+		float:left;
+		//padding-right: 20px;
+		/*box-shadow: 0 0 1px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .8);*/
+	}	
+}
+
+.scrolled {
+	background: rgba(0,0,0,.9);
+	
+	/*a {
+		color: white;
+	}*/
+}
+
+#footer {
+	//@include border-radiusFooter;
+	//@include border-radiusFooterDouble;
+	@include border-radiusPick(0);
+	height: 50px;
+	background-color: black;
+	//margin-left: 10%;
+	width: 81%;
+	position: absolute;
+	z-index: 999;
+	padding: 0;
+	//margin-top:-440px;
+	z-index:900;
+	
+	
+	p {
+		//float:center;
+		margin-left: 44.5%;
+		font-size: .75em;
+		padding-top: 4px;
+	}
+	
+	background: rgba(0,0,0,.8);
+}

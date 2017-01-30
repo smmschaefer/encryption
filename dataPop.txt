@@ -1,0 +1,35 @@
+StarCraft 2 is a highly competitive video game and had been pioneering the major league gaming scene for quite some time.  Due to this, finding Google spreadsheets with mass amounts of data was relatively simple.  This is how we acquired the data for our database.
+
+First, we scoured the Internet for useful spreadsheets on StarCraft 2 units and buildings.  This one done before we even had an idea of how we were going to setup our database.  Sites that stood out were Team Liquids SC2 stats webpage and a fan made Google spreadsheets docs created by Vlain.  
+
+Now that we had found the websites and spreadsheets to use to populate our database, our next challenge was how to ingest this data.  We decided to populated the data into an Excel spreadsheet, so we could easily manipulate columns and rows to fit our ER paradigm. We started to use a web-scraper to take the data from Team Liquid, but realized that because they had put the data into HTML table format.  This was great news for us, as you can simply drag and drop this type of data into an Excel document to populate a table.
+
+The data was not all in our Excel spreadsheets.  With simple Excel commands and functionality we manipulated the data to create tables that reflected our ER diagram.  Our next challenge was to ingest this data into our database.  There are many good applications that do this in an automated fashion, we decided to go with the applet website sqlizer.  Sqlizer converts xlsx/xls files, (and more) to MySQL script.  It does this by looking at a CSV file, knowing the Excel column and row range.  It populates the columns into a create table statement and the scans the row data per column for the data type.  It then populates the data type next to the column name inside of the create table statement.  Lastly, it creates an INSERT INTO statement for each row.  
+
+An example from sqlizer.io
+
+Column 1,Column 2,Column 3, Column_4
+Hello World, 12345, 01/01/2014, 56.78
+
+Into
+
+CREATE TABLE test1 (
+    Column_1 VARCHAR(11) CHARACTER SET utf8,
+    Column_2 INT,
+    Column_3 DATETIME,
+    Column_4 NUMERIC(4, 2)
+);
+INSERT INTO test1 VALUES ('Hello World', 12345,'2014-01-01 00:00:00', 56.78);
+
+Sqlizer isn’t perfect, especially for a project in POSTGRES.  The applet also encounters problems with consistancly of data types.  It declared some values in our tables as VARCHAR and others as INT; these values were the exact same data type.  Luckily VIM exists and we were able to take advantage of the find and replace function to update NULL values and change wrongly interrupted data types.  VIM was also especially helpful for adding HTML tags to the start of end of lines, such as this data population write up.  
+
+Useful vim commands used during this project…
+
+%s/$/<br> 
+
+2,30s/^/\&nbsp 
+
+Once all of the create tables, (which can be viewed by clicking the create tables link above) and insert row statements were created we simply ran the scripts to create our database in postgres.  
+
+
+

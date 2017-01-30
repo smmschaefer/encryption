@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>TEMP SITE</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/application.css">
+	<!-- 
+	color codes #199CD8
+				#91BD37
+	-->
+		
+  </head>
+  <body>
+			  
+	  <!-- NAV BAR HEAD -->
+	  <div id="nav">
+		  <!-- all links are a single class atm for simplicity - change to ID once finalized -->
+		  <div id="iconLogo"></div>
+		  <p class="navText"><a href="#" class="whoSwitch">WHO WE ARE</a>  <a href="#" class="whoSwitch">ADVERTISERS</a>
+		   <a href="#" class="whoSwitch">LESSORS</a>
+		   <a href="index.html">CONTACT</a> 
+	 	 </p>
+
+	  </div>
+	  
+	  <!-- START WRAPPER DIV -->
+	  <div id="wrapper"> <!-- labeled as container for closure -->
+		  
+	  <!-- SECTIONS -->
+	   
+	  <section class="secFlip">
+		<!-- with DIV transitions you can keep any message here that will stay up no matter what page is seleted -->
+		    <!-- HOME PAGE -->
+		  <div id="divHome">
+			 	<br><br>
+				
+				<button id="btnHide">HIDE</button>
+				<button id="btnTest">GRAB</button>
+				
+		
+				
+				<p> Learning Vue...</p>
+			<!-- v:on = @ -->
+			<h2> Select Advertisement </h2>
+			
+			<!--
+  						  <table id="tblData">
+  						     <thead>
+  								 <tr>
+  						       <th v-for="column in columns">
+  						         {{ column | uppercase }}
+  						           </th>
+  						          </tr>
+  						       </thead>
+  						   <tbody>
+  						   <tr v-for="tableData in tableData">
+							   		
+  						      <td>
+								  {{ tableData.client }}
+  						      </td>
+  						      <td>
+								  {{ tableData.ad }}
+  						      </td>
+  						      <td>
+								  {{ tableData.rt }}
+  						      </td>
+  						      <td>
+								<input type="radio" id="one">
+  						      </td>
+  						   </tr>
+  						   </tbody>
+  						</table>
+						  		<br><br> 
+								 
+						<h2>Select Screens</h2>
+ 						  <table id="tblChoose">
+ 						     <thead>
+ 								 <tr>
+ 						       <th v-for="column in columns">
+ 						         {{ column | uppercase }}
+ 						           </th>
+ 						          </tr>
+ 						       </thead>
+ 						   <tbody>
+ 						   <tr v-for="tableData in tableData">
+ 						      <td>
+							  {{ tableData.screen }}
+ 						      </td>
+ 						      <td>
+							  {{ tableData.disc }}
+ 						      </td>
+ 						      <td>
+							  {{ tableData.until }}
+ 						      </td>
+ 						      <td>
+							<input type="checkbox" id="one">
+ 						      </td>
+ 						   </tr>
+ 						   </tbody>
+ 						</table>
+						
+						-->
+			 			<div id="tasks">
+					
+			 					<p> This view test allows you to strike or remove a strike on a list item after clicking!</p>
+			 					<ul>
+			 						<li :class="{ 'completed' : task.completed }" 
+			 						v-for="task in tasks" 
+			 						@click="taskToggle(task)"> 
+			 							{{ task.body }}
+			 						</li>
+			 					</ul>
+			 			</div>
+						<div id="unTable"></div>
+						<div id="unTable1"></div>
+						<div id="unTable2"></div>
+						<div id="unTable3"></div>
+						<div id="unTable4"></div>
+						<div id="unTable5"></div>
+						<div id="unTable6"></div>
+			  <div id="app">
+				 
+				  
+				<!--  <form action="done.html" @submit.prevent="handleIt">
+					  <span class="error" v-show="!message">
+						  You must enter a message<br>
+					  </span>
+					  <textarea v-model="message"></textarea><br>
+					  
+					  <button type="submit" v-if="message">
+						  send msg
+					  </button>
+					
+  				  </form>
+
+				  <pre>
+					  {{ $data | json }}
+				  </pre>
+					-->
+					  
+					  <!-- or @click="count += 1"-->
+					
+					<counter subject="Likes"></counter>
+					
+					<counter subject="Dislikes"></counter>
+		
+			  </div>
+			  
+			<template id="counter-template">
+				<h2> {{ subject }}</h2>
+				{{ count }}
+				<button @click="count += 1">+</button>
+				<button @click="count -= 1">-</button>
+			</template>
+			
+  			<div id="compApp">
+  			<p>	Skill: {{ skill }} </p>
+			<input type="text" v-model="points">
+			
+  			</div>
+			
+			<div id="plan">
+				<p>test</p>
+				<div v-for="plan in plans" class="divVue">
+					<plan :plan="plan" :active.sync="active"></plan>
+			</div>
+			
+			
+			<template id="plan-template">
+				<div class="divVue">
+					<span>{{ plan.name }}</span>
+					<span> {{ plan.price}} / month</span>
+					<button @click="setActivePlan" v-show="plan.name !== active.name">
+						{{ isUpgrade ? 'Upgrade' : 'Downgrade' }}
+					</button>
+					
+					<span v-else>
+						Selected
+					</span>
+				</div>
+			</template>
+					   	 
+						<br><br><br><br> 
+						 
+				</div>	 
+		  </div> <!-- HOME -->
+		  	
+	  </section>
+	  
+		  
+	  <div id="divWhoWeAre">
+		
+		<h2> Transflection is entertainment with a soft, subtle and engaging marketing message.</h2>
+		  <p class="textInWhite"> We offer a cost effective solution for your advertisement that makes a nostalgic impression.
+
+		 Our company offers environmentally friendly advertisement solutions that will reduce your carbon footprint by avoiding use of heavy ink and plastic vinyl.
+
+		 We offer sustainable marketing solutions by strategically creating brand, product and company awareness to targeted audiences with the belief that advertising should be cost effective and affordable for every business.
+<!--
+		 <div class="colmn">
+		
+		 <h2>Transflection’s Advertisment Solution Is:</h2>
+		<ul id="tfList">
+		  <li v-for="item in items">
+		    {{ item.message }}
+		  </li>
+		</ul>
+	 	</div>
+		 
+		<div class="colmn">
+		<h2> Conventional Advertisement options are:</h2>
+		
+		<ul id="tfList">
+		  <li v-for="item in moreItems">
+		    {{ item.message }}
+		  </li>
+		</ul>
+	 	</div>
+	 -->
+	 </p>
+	  </div>
+	  
+	
+	  
+	 <!-- FOOTER -->
+	   
+    <div id="footer"><p id="footText">&copy; 2016 | <a href="#" class="cIn">Contact</p></div>
+ 	 </div> <!-- END WRAPPER-->
+	
+		<div id="popup-content">
+			<center>
+			<h2>POPUP DIV</h2>
+			<div class="inPopDiv">
+				
+				<p>BLANK</p>
+					
+			</div>	
+		</center>
+		
+		</div>
+		
+		
+		<!--
+		<div id="blur"></div>
+			-->
+		<div id="overlay-bg"></div>
+	  	<!-- js -->
+
+	  	<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/vuev1.0.22.js"></script>
+		<script src="js/vTests.js"></script>
+		
+		<script src="js/vTests.js"></script>
+		<script src="js/compVue.js"></script>
+		<script src="js/planVue.js"></script>
+		<script src="js/tasksVue.js"></script>
+		<script src="js/navColorChange.js"></script>
+		<script src="js/transition.js"></script>	
+		
+		<script src="js/hide.js"></script>	
+		<script src="js/extract.js"></script>
+		
+		
+	<!--
+		<script src="js/tfList.js"></script>	
+		<script src="js/vTestOne.js"></script>
+		<script src="js/shrinkNav.js"></script>
+		<script src="node_modules/vue-grid/vue-grid.js"></script>
+		<script src="js/button.js"></script>
+		<script src="js/popup.js"></script>
+		<script src="js/embed.js"></script>
+		-->
+  </body>
+  
+</html>
+
+
+	  

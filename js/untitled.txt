@@ -1,0 +1,9 @@
+var aList = new Vue({
+  el: '#tfList',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})

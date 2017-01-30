@@ -1,0 +1,158 @@
+//$sTextColor: red;
+//$sectionColor: #fff;
+//$sectionSpace: 20px;
+
+
+
+div {
+	@include border-radius;
+	
+	.feature {
+		border: 2px solid red;
+	}
+	
+	margin: 0;
+	width: 100%;
+	
+}
+
+#wrapper {
+	margin-top: 65px;
+	width:90%;
+	margin-left: 10%;
+	height:100%;
+//	position: relative;
+}
+
+section {
+	//@include border-radius;
+	background-color: $sectionColor;
+	position: relative;
+	//width: 91.76%;
+	width:90%;
+	//height: 300px;
+	//height:100%;
+	//margin-left: 10%;
+	//padding-left: 5%;
+	margin-top: $sectionSpace;
+	display: inline-block;
+	overflow: auto;
+	overflow-x: scroll;
+	z-index: 100;
+	background-color:rgba(0,0,0,.3);
+}
+
+.topSection {
+	background-color: $sectionColor - 30;
+	
+	p {
+		color: $sTextColor;
+	}
+}
+
+.secFlip {
+//	padding-left: 100px;
+	//height: 580px;
+}
+
+#divTest {
+	padding-left: 20px;
+	display: none;
+	//visibility: hidden;
+}
+
+#divReport {
+	padding-left: 20px;
+	display: none;
+	width: 70%;
+	//visibility: hidden;
+}
+
+#divCode {
+	padding-left: 20px;
+	display: none;
+	//visibility: hidden;
+}
+
+.divInCode {
+	margin-left: 4%;
+	width:70%;
+	border: 1px solid black;
+}
+
+#divHome {
+	height: 100%;
+	width: 100%;
+	overflow: scroll;
+	padding-left: 5%;
+	//padding-right: 10%;
+}
+
+.divVue {
+	padding-left: 20px;
+	height: 100%;
+}
+
+#divWhoWeAre {
+	@include border-radiusPick(0);
+	
+	background: white;
+	//height: 600px;
+	width: 100%;
+	z-index: 1200;
+	height: 100%;
+	display: none;
+	overflow: scroll;
+	//margin: 200px;
+	//padding: 0, 100px, 0;
+	//padding: 50px;
+}
+
+////////////////////////////////////////
+///////////////     VUE TEST
+////////////////////////////////////////
+
+table {
+  border: 2px solid #000;
+  border-radius: 3px;
+  background-color: #fff;
+  
+  
+  th {
+    background-color: lightgrey;
+	
+  }
+
+  td {
+    background-color: #f9f9f9;
+	
+
+  }
+ 
+  th, td {
+    min-width: 120px;
+    padding: 10px 20px;
+	color: $tableTextColor;
+  }
+  
+  tr:hover td {
+      background-color: #d7d7d7;
+  }
+  
+}
+
+#imgHide {
+	width: 154px;
+	height: 82px;
+	//position: absolute;
+	//padding: .2em 0 0 .2em;
+	//padding-left: 30px;
+	//margin-left: 10%;
+	//margin-top: -.8%;
+	//margin-bottom: 50px;
+	background: url(../img/smile.ppm) no-repeat;
+	background-size: 154px 82px;
+	float:left;
+}
+
+

@@ -1,0 +1,101 @@
+//$bgColor: grey;
+//$fontFamily: helvetica, ariel sans-serif;
+//$titleTextColor: grey;
+//$innerTextColor: grey;
+//$linkColor: $innerTextColor;
+
+html {
+	height: 100%;
+}
+
+body {
+	background: url("../img/transHome.jpg") no-repeat center center fixed;
+	font-family: $fontFamily;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: -100;
+	height: 100%;
+}
+
+p {
+	font-size: 1.01em;
+	margin:20px 5%;
+	color: $defaultText;
+	
+	&#cIn {
+		color: $defaultText;
+		font-size: .75em;
+		font-weight: 0;
+	}
+	
+	&.textInWhite {
+		color: $textInsideWhite;
+		font-size: 1em;
+		padding: 35px;
+	}
+	
+	&#footText{
+		margin: 0;
+		padding: 0;
+		margin-left: 46%;
+		font-size: .75em;
+		padding-top: 5px;
+	}
+}
+
+h2 {
+	font-size: 1.51em;
+	color: $titleTextColor;
+	margin: 10px 1%;
+    text-shadow: 2px 2px 4px black;
+	
+}
+
+h3 {
+	color: $titleTextColor;
+	font-size: 1.21em;
+	margin: 4px 1%;
+    text-shadow: 1px 1px 1px black;
+	
+}
+
+a {
+	color: $linkColor;
+	text-decoration: none;
+}
+
+.ir {
+	font: 0;
+	text-shadow: none;
+	color: transparent;
+}
+
+/////////////////////////
+////// TABLES
+/////////////////////////
+
+th {
+	text-align: left;
+	color: $defaultText;
+	border: 1px solid black;
+	padding: 2px;
+}
+
+tr {
+	text-align: left;
+	color: $defaultText - 10;
+	border: 1px solid black;
+	padding: 2px;
+}
+
+.style {
+	//font-size: 1em;
+	//border: 0px solid black;
+}
+
+.styleOne {
+	//font-size: 0em;
+	//border: 0px solid black;
+}

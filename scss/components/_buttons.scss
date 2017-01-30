@@ -1,0 +1,26 @@
+//$perspectiveFlip: 600px;
+$cardRadius: 30px;
+$cardWidth: 180px;
+$cardHeight: 160px;
+$colorWhite: white;
+$colorFrontR: red;
+$colorFrontB: blue;
+$colorFrontG: green;
+$colorBackR: red;
+$colorBackB: blue;
+$colorBackG: green;
+$colorBack: black;
+$colorBackImg: '../img/';
+
+
+#one {
+	width: 50px;
+}
+
+#btnHide {
+	@include border-radiusPick(5px);
+}
+
+#btnTest {
+	@include border-radiusPick(5px);
+}
