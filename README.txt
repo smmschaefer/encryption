@@ -1,7 +1,11 @@
+The idea for this came from a program I made in C which used SHA encryption to hide a message inside of a PNG.  
 
+# hide.js 
 
 hide.js takes a String message and breaks it down to the ACSII values.  From here it breaks the ASCII value into binary and stores the result into an array.  After fetching all IDs on the webpage it determines how many letters you can store.  It then attempts to store the letters by injecting classes into each ID that can host a 1 or 0.
 
+
+# extract.js
 
 extract.js fetches the hidden message through a similar process, but this time turning binary into ASCII.
 
